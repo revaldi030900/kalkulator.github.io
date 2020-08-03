@@ -1,0 +1,2451 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator IPS dan IPK</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+	<!-- <link rel="icon" sizes="60x60" type="image/png" href="https://lh3.googleusercontent.com/UoUsTKaWw-D30ka1r51HA3dpl0d_QLt_OBe8bmKwmoyqJpSt1Ojaikna70PO-O-1nEMYrH09qYQyJydJHa3K6PxDTJhyJIavugrUR0pC8t9pEIDgmkAPv39muPSRV2unaRqeg0azMIZSF1xaKAbMDKKa-NhXnYkSlDGtBt3RHqgGEJ5H0SkrG0JRlezj7NOJKv0Lb9a-gr7M9_wAcwSbE8q6h4Nh7jH9CHM0MoqXqihbK-OmYmEHDEku5UaKUNnLU9NZYCwHADYsQOBJOJjfPXJ1wkYc6uHn1gNqXQDREBiPffGBKt6C6RGhee9gcdprVdkne2MwU7YLRZKq-iHMmkdcrDJcyFSnf_eHCJT47FVBT5E2yqqOA4hiipFPy7bpMbwOJI-RfkQ4xTMtOsZuGZLJryYSmb-0hx6jZ8SDabwXgTrRmhJyNR8KRpZjyH0tOf4f7mIdOnBO9E3yeLJr1zXwo3mI0ZpYReeXFkFKfzXn0B1IXw9uzdQPgLngWA8M2FYQ9_Ivarvk4sf7VVbSN3_MbP4Lfvcce0jd5sUaovwoKRbYmwfIGeDgoda8-LXS3wC8yCxnRVoOoy7nVRxyNnCk9DEsxFMUBsze5tx5waIGJMNfgjFHw9C5PpCfWDeOukIjSwpqjAR5sMQbGzTAQLUyMB7L5qp9k_VYPOm-WqzcKAEsaUBqzweIKOVvxMBEErWM=w1366-h657-ft" /> -->
+</head>
+<body>
+	<div class="container mt-2">
+		<form action="javascript:hitung()">
+			<div class="card mb-3">
+				<div class="card-header #004d40 teal darken-4 text-white">
+					<center><h3>Kalkulator IPS dan IPK</h3></center>
+					<center>Made by Revaldi Eka Pramuja & Renno Virgonata</center>
+				</div>
+
+				<div class="card-body">
+					<!-- <div class="row mb-2">
+						<div class="col-md-12 col-lg-6 text-center">
+							<p class="text-secondary">*Tidak diharuskan mengisi sampai dengan semester 8, tapi jika tidak diisi semua maka IPK akan menjadi Indeks Prestasi Sementara.<br><br>
+							*Gunakan tanda titik (.) atau tanda koma (,) untuk angka desimal yang diinputkan. Bila "ex: 3.75, 3.50, 4.00" sudah diisi, maka "Index Nilai" akan diabaikan<br><br>
+							*Terdapat tombol "Hitung Sekarang" pada bagian bawah halaman ini.</p>
+						</div>
+						<div class="col-md-12 col-lg-6 text-center">
+							<p class="text-secondary">*Bila index nilai anda terdapat (+) atau (-), masukkan nilai tersebut pada kolom "ex: 3.75, 3.50, 4.00" dengan ketentuan nilai 0 s/d 4 per SKS-nya yakni sebagai berikut:<br>
+							A = 4, (A-) = 3.67, AB = 3.5, (B+) = 3.33, B = 3, (B-) = 2.67, BC = 2.5,<br>
+							(C+) = 2.33, C = 2, (C-) = 1.67, D = 1, E = 0<br><br>*Ketentuan nilai diatas belum tentu sesuai dengan standar nilai di kampus anda</p>
+						</div>
+					</div> -->
+					<div class="row mb-4">
+						<div class="col-lg-6 col-sm-12">
+							<!-- START ============================================================== Semester 01 ==============================================================-->
+							<div class="card">
+								<div class="card-header teal lighten-2 text-white">
+									<center><h5>Semester 1</h5></center>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-6" align="center"><b>Nilai/bobot Matkul</b></div>
+									<div class="col-6" align="center"><b>Besar SKS (1-8)</b></div>
+								</div>
+								<div class="card-body">
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus01_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk01_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk01_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus02_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk02_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk02_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus03_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk03_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk03_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus04_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk04_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk04_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus05_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk05_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk05_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus06_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk06_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk06_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus07_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk07_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk07_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus08_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk08_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk08_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus09_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk09_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk09_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus10_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk10_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus11_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk11_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus12_sm01" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm01" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk12_sm01" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-light">
+									<center><h6 id="ips_sm01">IPS : 0.00</h6> <h6 id="sks_sm01">Total SKS : 0</h6></center>
+								</div>
+							</div>
+						</div>
+						<!-- END ============================================================== Semester 01 ==============================================================-->
+
+						<!-- START ============================================================== Semester 02 ==============================================================-->
+						<div class="col-lg-6 col-sm-12">
+							<div class="card">
+								<div class="card-header teal lighten-2 text-white">
+									<center><h5>Semester 2</h5></center>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-6" align="center"><b>Nilai/bobot Matkul</b></div>
+									<div class="col-6" align="center"><b>Besar SKS (1-8)</b></div>
+								</div>
+								<div class="card-body">
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus01_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk01_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk01_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus02_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk02_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk02_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus03_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk03_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk03_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus04_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk04_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk04_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus05_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk05_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk05_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus06_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk06_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk06_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus07_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk07_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk07_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus08_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk08_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk08_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus09_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk09_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk09_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus10_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk10_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus11_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk11_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus12_sm02" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm02" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk12_sm02" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-light">
+									<center><h6 id="ips_sm02">IPS : 0.00</h6>  <h6 id="sks_sm02">Total SKS : 0</h6></center>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END ============================================================== Semester 02 ==============================================================-->
+
+					<!-- START ============================================================== Semester 03 ==============================================================-->
+					<div class="row mb-4">
+						<div class="col-lg-6 col-sm-12">
+							<div class="card">
+								<div class="card-header teal lighten-2 text-white">
+									<center><h5>Semester 3</h5></center>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-6" align="center"><b>Nilai/bobot Matkul</b></div>
+									<div class="col-6" align="center"><b>Besar SKS (1-8)</b></div>
+								</div>
+								<div class="card-body">
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus01_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk01_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk01_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus02_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk02_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk02_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus03_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk03_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk03_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus04_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk04_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk04_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus05_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk05_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk05_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus06_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk06_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk06_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus07_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk07_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk07_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus08_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk08_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk08_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus09_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk09_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk09_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus10_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk10_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus11_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk11_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus12_sm03" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm03" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk12_sm03" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-light">
+									<center><h6 id="ips_sm03">IPS : 0.00</h6>  <h6 id="sks_sm03">Total SKS : 0</h6></center>
+								</div>
+							</div>
+						</div>
+						<!-- END ============================================================== Semester 03 ==============================================================-->
+
+						<!-- START ============================================================== Semester 04 ==============================================================-->
+						<div class="col-lg-6 col-sm-12">
+							<div class="card">
+								<div class="card-header teal lighten-2 text-white">
+									<center><h5>Semester 4</h5></center>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-6" align="center"><b>Nilai/bobot Matkul</b></div>
+									<div class="col-6" align="center"><b>Besar SKS (1-8)</b></div>
+								</div>
+								<div class="card-body">
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus01_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk01_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk01_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus02_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk02_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk02_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus03_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk03_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk03_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus04_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk04_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk04_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus05_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk05_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk05_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus06_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk06_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk06_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus07_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk07_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk07_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus08_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk08_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk08_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus09_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk09_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk09_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus10_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk10_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus11_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk11_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus12_sm04" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm04" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk12_sm04" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-light">
+									<center><h6 id="ips_sm04">IPS : 0.00</h6>  <h6 id="sks_sm04">Total SKS : 0</h6></center>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END ============================================================== Semester 04 ==============================================================-->
+
+					<!-- START ============================================================== Semester 05 ==============================================================-->
+					<div class="row mb-4">
+						<div class="col-lg-6 col-sm-12">
+							<div class="card">
+								<div class="card-header teal lighten-2 text-white">
+									<center><h5>Semester 5</h5></center>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-6" align="center"><b>Nilai/bobot Matkul</b></div>
+									<div class="col-6" align="center"><b>Besar SKS (1-8)</b></div>
+								</div>
+								<div class="card-body">
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus01_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk01_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk01_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus02_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk02_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk02_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus03_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk03_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk03_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus04_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk04_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk04_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus05_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk05_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk05_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus06_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk06_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk06_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus07_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk07_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk07_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus08_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk08_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk08_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus09_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk09_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk09_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus10_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk10_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus11_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk11_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus12_sm05" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm05" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk12_sm05" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-light">
+									<center><h6 id="ips_sm05">IPS : 0.00</h6>  <h6 id="sks_sm05">Total SKS : 0</h6></center>
+								</div>
+							</div>
+						</div>
+						<!-- END ============================================================== Semester 05 ==============================================================-->
+
+						<!-- START ============================================================== Semester 06 ==============================================================-->
+						<div class="col-lg-6 col-sm-12">
+							<div class="card">
+								<div class="card-header teal lighten-2 text-white">
+									<center><h5>Semester 6</h5></center>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-6" align="center"><b>Nilai/bobot Matkul</b></div>
+									<div class="col-6" align="center"><b>Besar SKS (1-8)</b></div>
+								</div>
+								<div class="card-body">
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus01_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk01_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk01_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus02_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk02_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk02_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus03_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk03_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk03_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus04_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk04_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk04_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus05_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk05_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk05_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus06_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk06_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk06_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus07_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk07_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk07_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus08_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk08_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk08_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus09_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk09_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk09_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus10_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk10_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus11_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk11_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus12_sm06" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm06" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk12_sm06" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-light">
+									<center><h6 id="ips_sm06">IPS : 0.00</h6>  <h6 id="sks_sm06">Total SKS : 0</h6></center>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END ============================================================== Semester 06 ==============================================================-->
+
+					<!-- START ============================================================== Semester 07 ==============================================================-->
+					<div class="row mb-4">
+						<div class="col-lg-6 col-sm-12">
+							<div class="card">
+								<div class="card-header teal lighten-2 text-white">
+									<center><h5>Semester 7</h5></center>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-6" align="center"><b>Nilai/bobot Matkul</b></div>
+									<div class="col-6" align="center"><b>Besar SKS (1-8)</b></div>
+								</div>
+								<div class="card-body">
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus01_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk01_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk01_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus02_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk02_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk02_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus03_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk03_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk03_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus04_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk04_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk04_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus05_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk05_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk05_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus06_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk06_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk06_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus07_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk07_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk07_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus08_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk08_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk08_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus09_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk09_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk09_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus10_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk10_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus11_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk11_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus12_sm07" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm07" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk12_sm07" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-light">
+									<center><h6 id="ips_sm07">IPS : 0.00</h6>  <h6 id="sks_sm07">Total SKS : 0</h6></center>
+								</div>
+							</div>
+						</div>
+						<!-- END ============================================================== Semester 07 ==============================================================-->
+
+						<!-- START ============================================================== Semester 08 ==============================================================-->
+						<div class="col-lg-6 col-sm-12">
+							<div class="card">
+								<div class="card-header teal lighten-2 text-white">
+									<center><h5>Semester 8</h5></center>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-6" align="center"><b>Nilai/bobot Matkul</b></div>
+									<div class="col-6" align="center"><b>Besar SKS (1-8)</b></div>
+								</div>
+								<div class="card-body">
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus01_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk01_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk01_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus02_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk02_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk02_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus03_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk03_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk03_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus04_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk04_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk04_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus05_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk05_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk05_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus06_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk06_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk06_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus07_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk07_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk07_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus08_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk08_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk08_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus09_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk09_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk09_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus10_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk10_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus11_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk11_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-1">
+										<div class="col-6">
+											<div class="input-group">
+												<input type="number" id="cus12_sm08" min="0" max="4" step=".01" class="form-control" placeholder="ex: 3.75, 3.50, 4.00">
+											</div>
+										</div>
+										<!-- <div class="col-6">
+											<div class="input-group">
+												<input id="mk10_sm08" type="text" pattern="[ABCDEabcde]" title="A/B/C/D/E" maxlength="1" class="form-control" placeholder="Indeks Nilai">
+											</div>
+										</div> -->
+										<div class="col-6">
+											<div class="input-group">
+												<input id="sk12_sm08" type="number" min="1" max="8" class="form-control" placeholder="ex: 1, 2, 3...">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-light">
+									<center><h6 id="ips_sm08">IPS : 0.00</h6>  <h6 id="sks_sm08">Total SKS : 0</h6></center>
+								</div>
+							</div>
+							<!-- END ============================================================== Semester 08 ==============================================================-->
+
+						</div>
+					</div>
+					<div class="row mb-1">
+							<button class="btn btn-lg btn-block btn-primary" type="submit">Hitung Sekarang</button>
+						
+					</div>
+				</div>
+				<div class="card-footer bg-secondary text-white">
+					<center><h3 id="ipk">Total Nilai : 0, Total SKS : 0, IPK : 0.00</h3></center>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase.js"></script><!-- 
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script> --><!-- 
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		var today_sql = new Date().toISOString().slice(0, 10)+" "+new Date().toLocaleTimeString('en-GB');
+		var firebaseConfig = {
+		    apiKey: "AIzaSyCIg1IqTXM4jUBnbqNdkeHn8JlbRtslJiM",
+		    authDomain: "ipsipk.firebaseapp.com",
+		    databaseURL: "https://ipsipk.firebaseio.com",
+		    projectId: "ipsipk",
+		    storageBucket: "ipsipk.appspot.com",
+		    messagingSenderId: "840628991398",
+		    appId: "1:840628991398:web:3d6af5b92feb55d6a30b67",
+		    measurementId: "G-R31HMGRN2B"
+		  };
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+  		firebase.analytics();
+
+		var db = firebase.firestore();
+
+		var api_data = [];
+		var settings = {
+			"async": true,
+			"crossDomain": true,
+			"url": "https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/iplocation?apikey=873dbe322aea47f89dcf729dcc8f60e8",
+			"method": "GET",
+			"headers": {
+				"x-rapidapi-host": "find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com",
+				"x-rapidapi-key": "20d71c6f2dmshe93068da30fa486p1fde0fjsnf4740ab7240b"
+			}
+		}
+
+		$.ajax(settings).done(function (response) {
+			api_data.push(response);
+		});
+
+		// memeriksa apakah data yang di input kustom atau tidak
+		function index(cus){
+			if (cus != "") {
+				return parseFloat(cus);
+			}
+		}
+
+		// memeriksa bahwa hasil penghitungan angka atau bukan
+		function nan(nilai){
+			if (Number.isNaN(nilai)) {
+				return '0.00';
+			} else {
+				return nilai.toFixed(2).toString();
+			}
+		}
+
+		// memeriksa bahwa hasil penghitungan angka atau bukan
+		function angka_nan(nilai){
+			if (Number.isNaN(nilai)) {
+				return '0';
+			} else {
+				return nilai;
+			}
+		}
+
+		function hitung(){
+			// semua nilai
+			var all = [];
+			var nilai = [];
+			var total_nilai = 0;
+			var total_sks = 0;
+
+			// nilai semester 01
+			var sm01 = [];
+
+			var mk01_sm01 = index(document.getElementById("cus01_sm01").value);
+			var mk02_sm01 = index(document.getElementById("cus02_sm01").value);
+			var mk03_sm01 = index(document.getElementById("cus03_sm01").value);
+			var mk04_sm01 = index(document.getElementById("cus04_sm01").value);
+			var mk05_sm01 = index(document.getElementById("cus05_sm01").value);
+			var mk06_sm01 = index(document.getElementById("cus06_sm01").value);
+			var mk07_sm01 = index(document.getElementById("cus07_sm01").value);
+			var mk08_sm01 = index(document.getElementById("cus08_sm01").value);
+			var mk09_sm01 = index(document.getElementById("cus09_sm01").value);
+			var mk10_sm01 = index(document.getElementById("cus10_sm01").value);
+			var mk11_sm01 = index(document.getElementById("cus11_sm01").value);
+			var mk12_sm01 = index(document.getElementById("cus12_sm01").value);
+
+			var sk01_sm01 = parseInt(document.getElementById("sk01_sm01").value);
+			var sk02_sm01 = parseInt(document.getElementById("sk02_sm01").value);
+			var sk03_sm01 = parseInt(document.getElementById("sk03_sm01").value);
+			var sk04_sm01 = parseInt(document.getElementById("sk04_sm01").value);
+			var sk05_sm01 = parseInt(document.getElementById("sk05_sm01").value);
+			var sk06_sm01 = parseInt(document.getElementById("sk06_sm01").value);
+			var sk07_sm01 = parseInt(document.getElementById("sk07_sm01").value);
+			var sk08_sm01 = parseInt(document.getElementById("sk08_sm01").value);
+			var sk09_sm01 = parseInt(document.getElementById("sk09_sm01").value);
+			var sk10_sm01 = parseInt(document.getElementById("sk10_sm01").value);
+			var sk11_sm01 = parseInt(document.getElementById("sk11_sm01").value);
+			var sk12_sm01 = parseInt(document.getElementById("sk12_sm01").value);
+			
+			if (mk01_sm01 != null){ sm01.push([mk01_sm01, sk01_sm01]); }
+			if (mk02_sm01 != null){ sm01.push([mk02_sm01, sk02_sm01]); }
+			if (mk03_sm01 != null){ sm01.push([mk03_sm01, sk03_sm01]); }
+			if (mk04_sm01 != null){ sm01.push([mk04_sm01, sk04_sm01]); }
+			if (mk05_sm01 != null){ sm01.push([mk05_sm01, sk05_sm01]); }
+			if (mk06_sm01 != null){ sm01.push([mk06_sm01, sk06_sm01]); }
+			if (mk07_sm01 != null){ sm01.push([mk07_sm01, sk07_sm01]); }
+			if (mk08_sm01 != null){ sm01.push([mk08_sm01, sk08_sm01]); }
+			if (mk09_sm01 != null){ sm01.push([mk09_sm01, sk09_sm01]); }
+			if (mk10_sm01 != null){ sm01.push([mk10_sm01, sk10_sm01]); }
+			if (mk11_sm01 != null){ sm01.push([mk11_sm01, sk11_sm01]); }
+			if (mk12_sm01 != null){ sm01.push([mk12_sm01, sk12_sm01]); }
+
+			if (sm01.length > 0) { nilai.push(sm01); }
+
+			var jml_sks_sm01 = 0;
+			var total_nilai_sm01 = 0;
+
+			for (var a = 0; a < sm01.length; a++) {
+				jml_sks_sm01 += sm01[a][1];
+
+				var temp = sm01[a][0] * sm01[a][1];
+				total_nilai_sm01 += temp;
+			}
+
+			total_nilai += total_nilai_sm01;
+			total_sks += jml_sks_sm01;
+			var ips_sm01 = total_nilai_sm01 / jml_sks_sm01;
+
+			// nilai semester 02
+			var sm02 = [];
+
+			var mk01_sm02 = index(document.getElementById("cus01_sm02").value);
+			var mk02_sm02 = index(document.getElementById("cus02_sm02").value);
+			var mk03_sm02 = index(document.getElementById("cus03_sm02").value);
+			var mk04_sm02 = index(document.getElementById("cus04_sm02").value);
+			var mk05_sm02 = index(document.getElementById("cus05_sm02").value);
+			var mk06_sm02 = index(document.getElementById("cus06_sm02").value);
+			var mk07_sm02 = index(document.getElementById("cus07_sm02").value);
+			var mk08_sm02 = index(document.getElementById("cus08_sm02").value);
+			var mk09_sm02 = index(document.getElementById("cus09_sm02").value);
+			var mk10_sm02 = index(document.getElementById("cus10_sm02").value);
+			var mk11_sm02 = index(document.getElementById("cus11_sm02").value);
+			var mk12_sm02 = index(document.getElementById("cus12_sm02").value);
+
+			var sk01_sm02 = parseInt(document.getElementById("sk01_sm02").value);
+			var sk02_sm02 = parseInt(document.getElementById("sk02_sm02").value);
+			var sk03_sm02 = parseInt(document.getElementById("sk03_sm02").value);
+			var sk04_sm02 = parseInt(document.getElementById("sk04_sm02").value);
+			var sk05_sm02 = parseInt(document.getElementById("sk05_sm02").value);
+			var sk06_sm02 = parseInt(document.getElementById("sk06_sm02").value);
+			var sk07_sm02 = parseInt(document.getElementById("sk07_sm02").value);
+			var sk08_sm02 = parseInt(document.getElementById("sk08_sm02").value);
+			var sk09_sm02 = parseInt(document.getElementById("sk09_sm02").value);
+			var sk10_sm02 = parseInt(document.getElementById("sk10_sm02").value);
+			var sk11_sm02 = parseInt(document.getElementById("sk11_sm02").value);
+			var sk12_sm02 = parseInt(document.getElementById("sk12_sm02").value);
+			
+			if (mk01_sm02 != null){ sm02.push([mk01_sm02, sk01_sm02]); }
+			if (mk02_sm02 != null){ sm02.push([mk02_sm02, sk02_sm02]); }
+			if (mk03_sm02 != null){ sm02.push([mk03_sm02, sk03_sm02]); }
+			if (mk04_sm02 != null){ sm02.push([mk04_sm02, sk04_sm02]); }
+			if (mk05_sm02 != null){ sm02.push([mk05_sm02, sk05_sm02]); }
+			if (mk06_sm02 != null){ sm02.push([mk06_sm02, sk06_sm02]); }
+			if (mk07_sm02 != null){ sm02.push([mk07_sm02, sk07_sm02]); }
+			if (mk08_sm02 != null){ sm02.push([mk08_sm02, sk08_sm02]); }
+			if (mk09_sm02 != null){ sm02.push([mk09_sm02, sk09_sm02]); }
+			if (mk10_sm02 != null){ sm02.push([mk10_sm02, sk10_sm02]); }
+			if (mk11_sm02 != null){ sm02.push([mk11_sm02, sk11_sm02]); }
+			if (mk12_sm02 != null){ sm02.push([mk12_sm02, sk12_sm02]); }
+
+			if (sm02.length > 0) { nilai.push(sm02); }
+
+			var jml_sks_sm02 = 0;
+			var total_nilai_sm02 = 0;
+
+			for (var a = 0; a < sm02.length; a++) {
+				jml_sks_sm02 += sm02[a][1];
+
+				var temp = sm02[a][0] * sm02[a][1];
+				total_nilai_sm02 += temp;
+			}
+
+			total_nilai += total_nilai_sm02;
+			total_sks += jml_sks_sm02;
+			var ips_sm02 = total_nilai_sm02 / jml_sks_sm02;
+
+			// nilai semester 03
+			var sm03 = [];
+
+			var mk01_sm03 = index(document.getElementById("cus01_sm03").value);
+			var mk02_sm03 = index(document.getElementById("cus02_sm03").value);
+			var mk03_sm03 = index(document.getElementById("cus03_sm03").value);
+			var mk04_sm03 = index(document.getElementById("cus04_sm03").value);
+			var mk05_sm03 = index(document.getElementById("cus05_sm03").value);
+			var mk06_sm03 = index(document.getElementById("cus06_sm03").value);
+			var mk07_sm03 = index(document.getElementById("cus07_sm03").value);
+			var mk08_sm03 = index(document.getElementById("cus08_sm03").value);
+			var mk09_sm03 = index(document.getElementById("cus09_sm03").value);
+			var mk10_sm03 = index(document.getElementById("cus10_sm03").value);
+			var mk11_sm03 = index(document.getElementById("cus11_sm03").value);
+			var mk12_sm03 = index(document.getElementById("cus12_sm03").value);
+
+			var sk01_sm03 = parseInt(document.getElementById("sk01_sm03").value);
+			var sk02_sm03 = parseInt(document.getElementById("sk02_sm03").value);
+			var sk03_sm03 = parseInt(document.getElementById("sk03_sm03").value);
+			var sk04_sm03 = parseInt(document.getElementById("sk04_sm03").value);
+			var sk05_sm03 = parseInt(document.getElementById("sk05_sm03").value);
+			var sk06_sm03 = parseInt(document.getElementById("sk06_sm03").value);
+			var sk07_sm03 = parseInt(document.getElementById("sk07_sm03").value);
+			var sk08_sm03 = parseInt(document.getElementById("sk08_sm03").value);
+			var sk09_sm03 = parseInt(document.getElementById("sk09_sm03").value);
+			var sk10_sm03 = parseInt(document.getElementById("sk10_sm03").value);
+			var sk11_sm03 = parseInt(document.getElementById("sk11_sm03").value);
+			var sk12_sm03 = parseInt(document.getElementById("sk12_sm03").value);
+			
+			if (mk01_sm03 != null){ sm03.push([mk01_sm03, sk01_sm03]); }
+			if (mk02_sm03 != null){ sm03.push([mk02_sm03, sk02_sm03]); }
+			if (mk03_sm03 != null){ sm03.push([mk03_sm03, sk03_sm03]); }
+			if (mk04_sm03 != null){ sm03.push([mk04_sm03, sk04_sm03]); }
+			if (mk05_sm03 != null){ sm03.push([mk05_sm03, sk05_sm03]); }
+			if (mk06_sm03 != null){ sm03.push([mk06_sm03, sk06_sm03]); }
+			if (mk07_sm03 != null){ sm03.push([mk07_sm03, sk07_sm03]); }
+			if (mk08_sm03 != null){ sm03.push([mk08_sm03, sk08_sm03]); }
+			if (mk09_sm03 != null){ sm03.push([mk09_sm03, sk09_sm03]); }
+			if (mk10_sm03 != null){ sm03.push([mk10_sm03, sk10_sm03]); }
+			if (mk11_sm03 != null){ sm03.push([mk11_sm03, sk11_sm03]); }
+			if (mk12_sm03 != null){ sm03.push([mk12_sm03, sk12_sm03]); }
+
+			if (sm03.length > 0) { nilai.push(sm03); }
+
+			var jml_sks_sm03 = 0;
+			var total_nilai_sm03 = 0;
+
+			for (var a = 0; a < sm03.length; a++) {
+				jml_sks_sm03 += sm03[a][1];
+
+				var temp = sm03[a][0] * sm03[a][1];
+				total_nilai_sm03 += temp;
+			}
+
+			total_nilai += total_nilai_sm03;
+			total_sks += jml_sks_sm03;
+			var ips_sm03 = total_nilai_sm03 / jml_sks_sm03;
+
+			// nilai semester 04
+			var sm04 = [];
+
+			var mk01_sm04 = index(document.getElementById("cus01_sm04").value);
+			var mk02_sm04 = index(document.getElementById("cus02_sm04").value);
+			var mk03_sm04 = index(document.getElementById("cus03_sm04").value);
+			var mk04_sm04 = index(document.getElementById("cus04_sm04").value);
+			var mk05_sm04 = index(document.getElementById("cus05_sm04").value);
+			var mk06_sm04 = index(document.getElementById("cus06_sm04").value);
+			var mk07_sm04 = index(document.getElementById("cus07_sm04").value);
+			var mk08_sm04 = index(document.getElementById("cus08_sm04").value);
+			var mk09_sm04 = index(document.getElementById("cus09_sm04").value);
+			var mk10_sm04 = index(document.getElementById("cus10_sm04").value);
+			var mk11_sm04 = index(document.getElementById("cus11_sm04").value);
+			var mk12_sm04 = index(document.getElementById("cus12_sm04").value);
+
+			var sk01_sm04 = parseInt(document.getElementById("sk01_sm04").value);
+			var sk02_sm04 = parseInt(document.getElementById("sk02_sm04").value);
+			var sk03_sm04 = parseInt(document.getElementById("sk03_sm04").value);
+			var sk04_sm04 = parseInt(document.getElementById("sk04_sm04").value);
+			var sk05_sm04 = parseInt(document.getElementById("sk05_sm04").value);
+			var sk06_sm04 = parseInt(document.getElementById("sk06_sm04").value);
+			var sk07_sm04 = parseInt(document.getElementById("sk07_sm04").value);
+			var sk08_sm04 = parseInt(document.getElementById("sk08_sm04").value);
+			var sk09_sm04 = parseInt(document.getElementById("sk09_sm04").value);
+			var sk10_sm04 = parseInt(document.getElementById("sk10_sm04").value);
+			var sk11_sm04 = parseInt(document.getElementById("sk11_sm04").value);
+			var sk12_sm04 = parseInt(document.getElementById("sk12_sm04").value);
+			
+			if (mk01_sm04 != null){ sm04.push([mk01_sm04, sk01_sm04]); }
+			if (mk02_sm04 != null){ sm04.push([mk02_sm04, sk02_sm04]); }
+			if (mk03_sm04 != null){ sm04.push([mk03_sm04, sk03_sm04]); }
+			if (mk04_sm04 != null){ sm04.push([mk04_sm04, sk04_sm04]); }
+			if (mk05_sm04 != null){ sm04.push([mk05_sm04, sk05_sm04]); }
+			if (mk06_sm04 != null){ sm04.push([mk06_sm04, sk06_sm04]); }
+			if (mk07_sm04 != null){ sm04.push([mk07_sm04, sk07_sm04]); }
+			if (mk08_sm04 != null){ sm04.push([mk08_sm04, sk08_sm04]); }
+			if (mk09_sm04 != null){ sm04.push([mk09_sm04, sk09_sm04]); }
+			if (mk10_sm04 != null){ sm04.push([mk10_sm04, sk10_sm04]); }
+			if (mk11_sm04 != null){ sm04.push([mk11_sm04, sk11_sm04]); }
+			if (mk12_sm04 != null){ sm04.push([mk12_sm04, sk12_sm04]); }
+
+			if (sm04.length > 0) { nilai.push(sm04); }
+
+			var jml_sks_sm04 = 0;
+			var total_nilai_sm04 = 0;
+
+			for (var a = 0; a < sm04.length; a++) {
+				jml_sks_sm04 += sm04[a][1];
+
+				var temp = sm04[a][0] * sm04[a][1];
+				total_nilai_sm04 += temp;
+			}
+
+			total_nilai += total_nilai_sm04;
+			total_sks += jml_sks_sm04;
+			var ips_sm04 = total_nilai_sm04 / jml_sks_sm04;
+
+			// nilai semester 05
+			var sm05 = [];
+
+			var mk01_sm05 = index(document.getElementById("cus01_sm05").value);
+			var mk02_sm05 = index(document.getElementById("cus02_sm05").value);
+			var mk03_sm05 = index(document.getElementById("cus03_sm05").value);
+			var mk04_sm05 = index(document.getElementById("cus04_sm05").value);
+			var mk05_sm05 = index(document.getElementById("cus05_sm05").value);
+			var mk06_sm05 = index(document.getElementById("cus06_sm05").value);
+			var mk07_sm05 = index(document.getElementById("cus07_sm05").value);
+			var mk08_sm05 = index(document.getElementById("cus08_sm05").value);
+			var mk09_sm05 = index(document.getElementById("cus09_sm05").value);
+			var mk10_sm05 = index(document.getElementById("cus10_sm05").value);
+			var mk11_sm05 = index(document.getElementById("cus11_sm05").value);
+			var mk12_sm05 = index(document.getElementById("cus12_sm05").value);
+
+			var sk01_sm05 = parseInt(document.getElementById("sk01_sm05").value);
+			var sk02_sm05 = parseInt(document.getElementById("sk02_sm05").value);
+			var sk03_sm05 = parseInt(document.getElementById("sk03_sm05").value);
+			var sk04_sm05 = parseInt(document.getElementById("sk04_sm05").value);
+			var sk05_sm05 = parseInt(document.getElementById("sk05_sm05").value);
+			var sk06_sm05 = parseInt(document.getElementById("sk06_sm05").value);
+			var sk07_sm05 = parseInt(document.getElementById("sk07_sm05").value);
+			var sk08_sm05 = parseInt(document.getElementById("sk08_sm05").value);
+			var sk09_sm05 = parseInt(document.getElementById("sk09_sm05").value);
+			var sk10_sm05 = parseInt(document.getElementById("sk10_sm05").value);
+			var sk11_sm05 = parseInt(document.getElementById("sk11_sm05").value);
+			var sk12_sm05 = parseInt(document.getElementById("sk12_sm05").value);
+			
+			if (mk01_sm05 != null){ sm05.push([mk01_sm05, sk01_sm05]); }
+			if (mk02_sm05 != null){ sm05.push([mk02_sm05, sk02_sm05]); }
+			if (mk03_sm05 != null){ sm05.push([mk03_sm05, sk03_sm05]); }
+			if (mk04_sm05 != null){ sm05.push([mk04_sm05, sk04_sm05]); }
+			if (mk05_sm05 != null){ sm05.push([mk05_sm05, sk05_sm05]); }
+			if (mk06_sm05 != null){ sm05.push([mk06_sm05, sk06_sm05]); }
+			if (mk07_sm05 != null){ sm05.push([mk07_sm05, sk07_sm05]); }
+			if (mk08_sm05 != null){ sm05.push([mk08_sm05, sk08_sm05]); }
+			if (mk09_sm05 != null){ sm05.push([mk09_sm05, sk09_sm05]); }
+			if (mk10_sm05 != null){ sm05.push([mk10_sm05, sk10_sm05]); }
+			if (mk11_sm05 != null){ sm05.push([mk11_sm05, sk11_sm05]); }
+			if (mk12_sm05 != null){ sm05.push([mk12_sm05, sk12_sm05]); }
+
+			if (sm05.length > 0) { nilai.push(sm05); }
+
+			var jml_sks_sm05 = 0;
+			var total_nilai_sm05 = 0;
+
+			for (var a = 0; a < sm05.length; a++) {
+				jml_sks_sm05 += sm05[a][1];
+
+				var temp = sm05[a][0] * sm05[a][1];
+				total_nilai_sm05 += temp;
+			}
+
+			total_nilai += total_nilai_sm05;
+			total_sks += jml_sks_sm05;
+			var ips_sm05 = total_nilai_sm05 / jml_sks_sm05;
+
+			// nilai semester 06
+			var sm06 = [];
+
+			var mk01_sm06 = index(document.getElementById("cus01_sm06").value);
+			var mk02_sm06 = index(document.getElementById("cus02_sm06").value);
+			var mk03_sm06 = index(document.getElementById("cus03_sm06").value);
+			var mk04_sm06 = index(document.getElementById("cus04_sm06").value);
+			var mk05_sm06 = index(document.getElementById("cus05_sm06").value);
+			var mk06_sm06 = index(document.getElementById("cus06_sm06").value);
+			var mk07_sm06 = index(document.getElementById("cus07_sm06").value);
+			var mk08_sm06 = index(document.getElementById("cus08_sm06").value);
+			var mk09_sm06 = index(document.getElementById("cus09_sm06").value);
+			var mk10_sm06 = index(document.getElementById("cus10_sm06").value);
+			var mk11_sm06 = index(document.getElementById("cus11_sm06").value);
+			var mk12_sm06 = index(document.getElementById("cus12_sm06").value);
+
+			var sk01_sm06 = parseInt(document.getElementById("sk01_sm06").value);
+			var sk02_sm06 = parseInt(document.getElementById("sk02_sm06").value);
+			var sk03_sm06 = parseInt(document.getElementById("sk03_sm06").value);
+			var sk04_sm06 = parseInt(document.getElementById("sk04_sm06").value);
+			var sk05_sm06 = parseInt(document.getElementById("sk05_sm06").value);
+			var sk06_sm06 = parseInt(document.getElementById("sk06_sm06").value);
+			var sk07_sm06 = parseInt(document.getElementById("sk07_sm06").value);
+			var sk08_sm06 = parseInt(document.getElementById("sk08_sm06").value);
+			var sk09_sm06 = parseInt(document.getElementById("sk09_sm06").value);
+			var sk10_sm06 = parseInt(document.getElementById("sk10_sm06").value);
+			var sk11_sm06 = parseInt(document.getElementById("sk11_sm06").value);
+			var sk12_sm06 = parseInt(document.getElementById("sk12_sm06").value);
+			
+			if (mk01_sm06 != null){ sm06.push([mk01_sm06, sk01_sm06]); }
+			if (mk02_sm06 != null){ sm06.push([mk02_sm06, sk02_sm06]); }
+			if (mk03_sm06 != null){ sm06.push([mk03_sm06, sk03_sm06]); }
+			if (mk04_sm06 != null){ sm06.push([mk04_sm06, sk04_sm06]); }
+			if (mk05_sm06 != null){ sm06.push([mk05_sm06, sk05_sm06]); }
+			if (mk06_sm06 != null){ sm06.push([mk06_sm06, sk06_sm06]); }
+			if (mk07_sm06 != null){ sm06.push([mk07_sm06, sk07_sm06]); }
+			if (mk08_sm06 != null){ sm06.push([mk08_sm06, sk08_sm06]); }
+			if (mk09_sm06 != null){ sm06.push([mk09_sm06, sk09_sm06]); }
+			if (mk10_sm06 != null){ sm06.push([mk10_sm06, sk10_sm06]); }
+			if (mk11_sm06 != null){ sm06.push([mk11_sm06, sk11_sm06]); }
+			if (mk12_sm06 != null){ sm06.push([mk12_sm06, sk12_sm06]); }
+
+			if (sm06.length > 0) { nilai.push(sm06); }
+
+			var jml_sks_sm06 = 0;
+			var total_nilai_sm06 = 0;
+
+			for (var a = 0; a < sm06.length; a++) {
+				jml_sks_sm06 += sm06[a][1];
+
+				var temp = sm06[a][0] * sm06[a][1];
+				total_nilai_sm06 += temp;
+			}
+
+			total_nilai += total_nilai_sm06;
+			total_sks += jml_sks_sm06;
+			var ips_sm06 = total_nilai_sm06 / jml_sks_sm06;
+
+			// nilai semester 07
+			var sm07 = [];
+
+			var mk01_sm07 = index(document.getElementById("cus01_sm07").value);
+			var mk02_sm07 = index(document.getElementById("cus02_sm07").value);
+			var mk03_sm07 = index(document.getElementById("cus03_sm07").value);
+			var mk04_sm07 = index(document.getElementById("cus04_sm07").value);
+			var mk05_sm07 = index(document.getElementById("cus05_sm07").value);
+			var mk06_sm07 = index(document.getElementById("cus06_sm07").value);
+			var mk07_sm07 = index(document.getElementById("cus07_sm07").value);
+			var mk08_sm07 = index(document.getElementById("cus08_sm07").value);
+			var mk09_sm07 = index(document.getElementById("cus09_sm07").value);
+			var mk10_sm07 = index(document.getElementById("cus10_sm07").value);
+			var mk11_sm07 = index(document.getElementById("cus11_sm07").value);
+			var mk12_sm07 = index(document.getElementById("cus12_sm07").value);
+
+			var sk01_sm07 = parseInt(document.getElementById("sk01_sm07").value);
+			var sk02_sm07 = parseInt(document.getElementById("sk02_sm07").value);
+			var sk03_sm07 = parseInt(document.getElementById("sk03_sm07").value);
+			var sk04_sm07 = parseInt(document.getElementById("sk04_sm07").value);
+			var sk05_sm07 = parseInt(document.getElementById("sk05_sm07").value);
+			var sk06_sm07 = parseInt(document.getElementById("sk06_sm07").value);
+			var sk07_sm07 = parseInt(document.getElementById("sk07_sm07").value);
+			var sk08_sm07 = parseInt(document.getElementById("sk08_sm07").value);
+			var sk09_sm07 = parseInt(document.getElementById("sk09_sm07").value);
+			var sk10_sm07 = parseInt(document.getElementById("sk10_sm07").value);
+			var sk11_sm07 = parseInt(document.getElementById("sk11_sm07").value);
+			var sk12_sm07 = parseInt(document.getElementById("sk12_sm07").value);
+			
+			if (mk01_sm07 != null){ sm07.push([mk01_sm07, sk01_sm07]); }
+			if (mk02_sm07 != null){ sm07.push([mk02_sm07, sk02_sm07]); }
+			if (mk03_sm07 != null){ sm07.push([mk03_sm07, sk03_sm07]); }
+			if (mk04_sm07 != null){ sm07.push([mk04_sm07, sk04_sm07]); }
+			if (mk05_sm07 != null){ sm07.push([mk05_sm07, sk05_sm07]); }
+			if (mk06_sm07 != null){ sm07.push([mk06_sm07, sk06_sm07]); }
+			if (mk07_sm07 != null){ sm07.push([mk07_sm07, sk07_sm07]); }
+			if (mk08_sm07 != null){ sm07.push([mk08_sm07, sk08_sm07]); }
+			if (mk09_sm07 != null){ sm07.push([mk09_sm07, sk09_sm07]); }
+			if (mk10_sm07 != null){ sm07.push([mk10_sm07, sk10_sm07]); }
+			if (mk11_sm07 != null){ sm07.push([mk11_sm07, sk11_sm07]); }
+			if (mk12_sm07 != null){ sm07.push([mk12_sm07, sk12_sm07]); }
+
+			if (sm07.length > 0) { nilai.push(sm07); }
+
+			var jml_sks_sm07 = 0;
+			var total_nilai_sm07 = 0;
+
+			for (var a = 0; a < sm07.length; a++) {
+				jml_sks_sm07 += sm07[a][1];
+
+				var temp = sm07[a][0] * sm07[a][1];
+				total_nilai_sm07 += temp;
+			}
+
+			total_nilai += total_nilai_sm07;
+			total_sks += jml_sks_sm07;
+			var ips_sm07 = total_nilai_sm07 / jml_sks_sm07;
+
+			// nilai semester 08
+			var sm08 = [];
+
+			var mk01_sm08 = index(document.getElementById("cus01_sm08").value);
+			var mk02_sm08 = index(document.getElementById("cus02_sm08").value);
+			var mk03_sm08 = index(document.getElementById("cus03_sm08").value);
+			var mk04_sm08 = index(document.getElementById("cus04_sm08").value);
+			var mk05_sm08 = index(document.getElementById("cus05_sm08").value);
+			var mk06_sm08 = index(document.getElementById("cus06_sm08").value);
+			var mk07_sm08 = index(document.getElementById("cus07_sm08").value);
+			var mk08_sm08 = index(document.getElementById("cus08_sm08").value);
+			var mk09_sm08 = index(document.getElementById("cus09_sm08").value);
+			var mk10_sm08 = index(document.getElementById("cus10_sm08").value);
+			var mk11_sm08 = index(document.getElementById("cus11_sm08").value);
+			var mk12_sm08 = index(document.getElementById("cus12_sm08").value);
+
+			var sk01_sm08 = parseInt(document.getElementById("sk01_sm08").value);
+			var sk02_sm08 = parseInt(document.getElementById("sk02_sm08").value);
+			var sk03_sm08 = parseInt(document.getElementById("sk03_sm08").value);
+			var sk04_sm08 = parseInt(document.getElementById("sk04_sm08").value);
+			var sk05_sm08 = parseInt(document.getElementById("sk05_sm08").value);
+			var sk06_sm08 = parseInt(document.getElementById("sk06_sm08").value);
+			var sk07_sm08 = parseInt(document.getElementById("sk07_sm08").value);
+			var sk08_sm08 = parseInt(document.getElementById("sk08_sm08").value);
+			var sk09_sm08 = parseInt(document.getElementById("sk09_sm08").value);
+			var sk10_sm08 = parseInt(document.getElementById("sk10_sm08").value);
+			var sk11_sm08 = parseInt(document.getElementById("sk11_sm08").value);
+			var sk12_sm08 = parseInt(document.getElementById("sk12_sm08").value);
+			
+			if (mk01_sm08 != null){ sm08.push([mk01_sm08, sk01_sm08]); }
+			if (mk02_sm08 != null){ sm08.push([mk02_sm08, sk02_sm08]); }
+			if (mk03_sm08 != null){ sm08.push([mk03_sm08, sk03_sm08]); }
+			if (mk04_sm08 != null){ sm08.push([mk04_sm08, sk04_sm08]); }
+			if (mk05_sm08 != null){ sm08.push([mk05_sm08, sk05_sm08]); }
+			if (mk06_sm08 != null){ sm08.push([mk06_sm08, sk06_sm08]); }
+			if (mk07_sm08 != null){ sm08.push([mk07_sm08, sk07_sm08]); }
+			if (mk08_sm08 != null){ sm08.push([mk08_sm08, sk08_sm08]); }
+			if (mk09_sm08 != null){ sm08.push([mk09_sm08, sk09_sm08]); }
+			if (mk10_sm08 != null){ sm08.push([mk10_sm08, sk10_sm08]); }
+			if (mk11_sm08 != null){ sm08.push([mk09_sm08, sk11_sm08]); }
+			if (mk12_sm08 != null){ sm08.push([mk10_sm08, sk12_sm08]); }
+
+			if (sm08.length > 0) { nilai.push(sm08); }
+
+			var jml_sks_sm08 = 0;
+			var total_nilai_sm08 = 0;
+
+			for (var a = 0; a < sm08.length; a++) {
+				jml_sks_sm08 += sm08[a][1];
+
+				var temp = sm08[a][0] * sm08[a][1];
+				total_nilai_sm08 += temp;
+			}
+
+			total_nilai += total_nilai_sm08;
+			total_sks += jml_sks_sm08;
+			var ips_sm08 = total_nilai_sm08 / jml_sks_sm08;
+
+			// Penghitungan akhir
+			var ipk = total_nilai / total_sks;
+
+			// Rubah tampilan nilai
+			document.getElementById("ips_sm01").innerHTML = "IPS : " + nan(ips_sm01);
+			document.getElementById("ips_sm02").innerHTML = "IPS : " + nan(ips_sm02);
+			document.getElementById("ips_sm03").innerHTML = "IPS : " + nan(ips_sm03);
+			document.getElementById("ips_sm04").innerHTML = "IPS : " + nan(ips_sm04);
+			document.getElementById("ips_sm05").innerHTML = "IPS : " + nan(ips_sm05);
+			document.getElementById("ips_sm06").innerHTML = "IPS : " + nan(ips_sm06);
+			document.getElementById("ips_sm07").innerHTML = "IPS : " + nan(ips_sm07);
+			document.getElementById("ips_sm08").innerHTML = "IPS : " + nan(ips_sm08);
+			
+			document.getElementById("sks_sm01").innerHTML = "Total SKS : " + angka_nan(jml_sks_sm01);
+			document.getElementById("sks_sm02").innerHTML = "Total SKS : " + angka_nan(jml_sks_sm02);
+			document.getElementById("sks_sm03").innerHTML = "Total SKS : " + angka_nan(jml_sks_sm03);
+			document.getElementById("sks_sm04").innerHTML = "Total SKS : " + angka_nan(jml_sks_sm04);
+			document.getElementById("sks_sm05").innerHTML = "Total SKS : " + angka_nan(jml_sks_sm05);
+			document.getElementById("sks_sm06").innerHTML = "Total SKS : " + angka_nan(jml_sks_sm06);
+			document.getElementById("sks_sm07").innerHTML = "Total SKS : " + angka_nan(jml_sks_sm07);
+			document.getElementById("sks_sm08").innerHTML = "Total SKS : " + angka_nan(jml_sks_sm08);
+
+			document.getElementById("ipk").innerHTML = "Total Nilai : " + total_nilai.toFixed(2).toString() + ", Total SKS : " + total_sks.toString() + ", IPK : " + nan(ipk);
+
+			all = {
+				log_data : { 
+						log_sm01: ips_sm01 + ", " + jml_sks_sm01,
+						log_sm02: ips_sm02 + ", " + jml_sks_sm02,
+						log_sm03: ips_sm03 + ", " + jml_sks_sm03,
+						log_sm04: ips_sm04 + ", " + jml_sks_sm04,
+						log_sm05: ips_sm05 + ", " + jml_sks_sm05,
+						log_sm06: ips_sm06 + ", " + jml_sks_sm06,
+						log_sm07: ips_sm07 + ", " + jml_sks_sm07,
+						log_sm08: ips_sm08 + ", " + jml_sks_sm08,
+					},
+				log_total_nilai: total_nilai,
+				log_total_sks: total_sks,
+				log_ipk: ipk,
+				api: api_data
+			};
+
+			db.collection("ipsipk").add({
+				db_date : today_sql,
+				db_kota: api_data[0].city,
+				db_provinsi: api_data[0].state,
+				db_provider: api_data[0].org,
+				db_ip: api_data[0].ip,
+				db_data : { 
+						db_sm01: ips_sm01 + ", " + jml_sks_sm01,
+						db_sm02: ips_sm02 + ", " + jml_sks_sm02,
+						db_sm03: ips_sm03 + ", " + jml_sks_sm03,
+						db_sm04: ips_sm04 + ", " + jml_sks_sm04,
+						db_sm05: ips_sm05 + ", " + jml_sks_sm05,
+						db_sm06: ips_sm06 + ", " + jml_sks_sm06,
+						db_sm07: ips_sm07 + ", " + jml_sks_sm07,
+						db_sm08: ips_sm08 + ", " + jml_sks_sm08,
+					},
+				db_total_nilai: total_nilai,
+				db_total_sks: total_sks,
+				db_ipk: ipk
+			})
+			.then(function(docRef) {
+				console.log("ID: ", docRef.id);
+			})
+			.catch(function(error) {
+				console.error("Error adding document: ", error);
+			});
+
+			console.log(all);
+		}
+	</script>
+</body>
+</html>
